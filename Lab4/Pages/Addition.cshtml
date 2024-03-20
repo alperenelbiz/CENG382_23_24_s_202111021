@@ -1,4 +1,33 @@
 ﻿@page
 @model MyApp.Namespace.AdditionModel
 @{
+    ViewData["Title"] = "Addition Form";
 }
+
+<div style="text-align:center">
+
+    <h1>Addition Form</h1><br>
+
+    <button id="toggleButton" class="btn btn-primary">Hide/Show Element</button> <br><br>
+    <div id="content" style="display:none">
+        <h3>This is the hidden line.</h3>
+    </div>
+    <br>
+
+    <button class="btn btn-primary" id="toggleButton2">Hide/Show Form</button>
+    <div id="content2" style="display:none">
+        <form>
+            <label for="num1">Enter first number:</label><br>
+            <input type="text" id="num1" name="num1">
+            <br>
+            <label for="num2">Enter second number:</label><br>
+            <input type="text" id="num2" name="num2">
+            <br><br>
+            <button type="button" class="btn btn-primary" id="calculateButton">Calculate Sum</button>
+        </form>
+        <p id="result"></p>
+    </div>
+</div>
+
+<script src="~/js/addition.js"></script>
+</body>
