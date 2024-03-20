@@ -30,3 +30,35 @@ C:\Users\alper\OneDrive\Masaüstü\lab1\CENG382_23_24_s_202111021\Lab4\obj\Debug
 C:\Users\alper\OneDrive\Masaüstü\lab1\CENG382_23_24_s_202111021\Lab4\obj\Debug\net8.0\Lab4.genruntimeconfig.cache
 C:\Users\alper\OneDrive\Masaüstü\lab1\CENG382_23_24_s_202111021\Lab4\obj\Debug\net8.0\ref\Lab4.dll
 C:\Users\alper\OneDrive\Masaüstü\lab1\CENG382_23_24_s_202111021\Lab4\bin\Debug\net8.0\icons\manifest.json
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\bin\Debug\net8.0\appsettings.Development.json
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\bin\Debug\net8.0\appsettings.json
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\bin\Debug\net8.0\icons\manifest.json
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\bin\Debug\net8.0\Lab4.staticwebassets.runtime.json
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\bin\Debug\net8.0\Lab4.exe
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\bin\Debug\net8.0\Lab4.deps.json
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\bin\Debug\net8.0\Lab4.runtimeconfig.json
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\bin\Debug\net8.0\Lab4.dll
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\bin\Debug\net8.0\Lab4.pdb
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\obj\Debug\net8.0\Lab4.GeneratedMSBuildEditorConfig.editorconfig
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\obj\Debug\net8.0\Lab4.AssemblyInfoInputs.cache
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\obj\Debug\net8.0\Lab4.AssemblyInfo.cs
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\obj\Debug\net8.0\Lab4.csproj.CoreCompileInputs.cache
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\obj\Debug\net8.0\Lab4.MvcApplicationPartsAssemblyInfo.cache
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\obj\Debug\net8.0\Lab4.RazorAssemblyInfo.cache
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\obj\Debug\net8.0\Lab4.RazorAssemblyInfo.cs
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\obj\Debug\net8.0\Lab4.sourcelink.json
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\obj\Debug\net8.0\staticwebassets.build.json
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\obj\Debug\net8.0\staticwebassets.development.json
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\obj\Debug\net8.0\staticwebassets\msbuild.Lab4.Microsoft.AspNetCore.StaticWebAssets.props
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\obj\Debug\net8.0\staticwebassets\msbuild.build.Lab4.props
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Lab4.props
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Lab4.props
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\obj\Debug\net8.0\staticwebassets.pack.json
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\obj\Debug\net8.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\obj\Debug\net8.0\scopedcss\bundle\Lab4.styles.css
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\obj\Debug\net8.0\scopedcss\projectbundle\Lab4.bundle.scp.css
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\obj\Debug\net8.0\Lab4.dll
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\obj\Debug\net8.0\refint\Lab4.dll
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\obj\Debug\net8.0\Lab4.pdb
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\obj\Debug\net8.0\Lab4.genruntimeconfig.cache
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\obj\Debug\net8.0\ref\Lab4.dll

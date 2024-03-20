@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alper\\OneDrive\\Masaüstü\\lab1\\CENG382_23_24_s_202111021\\Lab4\\Lab4.csproj",
+      "projectUniqueName": "C:\\AlperenElbiz\\Software Projects\\382\\CENG382_23_24_s_202111021\\Lab4\\Lab4.csproj",
       "projectName": "Lab4",
-      "projectPath": "C:\\Users\\alper\\OneDrive\\Masaüstü\\lab1\\CENG382_23_24_s_202111021\\Lab4\\Lab4.csproj",
+      "projectPath": "C:\\AlperenElbiz\\Software Projects\\382\\CENG382_23_24_s_202111021\\Lab4\\Lab4.csproj",
       "packagesPath": "C:\\Users\\alper\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alper\\OneDrive\\Masaüstü\\lab1\\CENG382_23_24_s_202111021\\Lab4\\obj\\",
+      "outputPath": "C:\\AlperenElbiz\\Software Projects\\382\\CENG382_23_24_s_202111021\\Lab4\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\alper\\AppData\\Roaming\\NuGet\\NuGet.Config"

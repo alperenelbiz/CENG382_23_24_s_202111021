@@ -9,39 +9,43 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Lab4
 build_property.RootNamespace = Lab4
-build_property.ProjectDir = C:\Users\alper\OneDrive\Masaüstü\lab1\CENG382_23_24_s_202111021\Lab4\
+build_property.ProjectDir = C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\alper\OneDrive\Masaüstü\lab1\CENG382_23_24_s_202111021\Lab4
+build_property.MSBuildProjectDirectory = C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\lab4
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/alper/OneDrive/Masaüstü/lab1/CENG382_23_24_s_202111021/Lab4/Pages/Error.cshtml]
+[C:/AlperenElbiz/Software Projects/382/CENG382_23_24_s_202111021/lab4/Pages/Addition.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkaXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/AlperenElbiz/Software Projects/382/CENG382_23_24_s_202111021/lab4/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alper/OneDrive/Masaüstü/lab1/CENG382_23_24_s_202111021/Lab4/Pages/Index.cshtml]
+[C:/AlperenElbiz/Software Projects/382/CENG382_23_24_s_202111021/lab4/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alper/OneDrive/Masaüstü/lab1/CENG382_23_24_s_202111021/Lab4/Pages/Privacy.cshtml]
+[C:/AlperenElbiz/Software Projects/382/CENG382_23_24_s_202111021/lab4/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alper/OneDrive/Masaüstü/lab1/CENG382_23_24_s_202111021/Lab4/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/AlperenElbiz/Software Projects/382/CENG382_23_24_s_202111021/lab4/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alper/OneDrive/Masaüstü/lab1/CENG382_23_24_s_202111021/Lab4/Pages/_ViewImports.cshtml]
+[C:/AlperenElbiz/Software Projects/382/CENG382_23_24_s_202111021/lab4/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alper/OneDrive/Masaüstü/lab1/CENG382_23_24_s_202111021/Lab4/Pages/_ViewStart.cshtml]
+[C:/AlperenElbiz/Software Projects/382/CENG382_23_24_s_202111021/lab4/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/alper/OneDrive/Masaüstü/lab1/CENG382_23_24_s_202111021/Lab4/Pages/Shared/_Layout.cshtml]
+[C:/AlperenElbiz/Software Projects/382/CENG382_23_24_s_202111021/lab4/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-q5iixq0evp
