@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\AlperenElbiz\\Software Projects\\382\\CENG382_23_24_s_202111021\\lab4\\Lab4.csproj": {}
+    "C:\\AlperenElbiz\\Software Projects\\382\\CENG382_23_24_s_202111021\\Lab4\\Lab4.csproj": {}
   },
   "projects": {
-    "C:\\AlperenElbiz\\Software Projects\\382\\CENG382_23_24_s_202111021\\lab4\\Lab4.csproj": {
+    "C:\\AlperenElbiz\\Software Projects\\382\\CENG382_23_24_s_202111021\\Lab4\\Lab4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\AlperenElbiz\\Software Projects\\382\\CENG382_23_24_s_202111021\\lab4\\Lab4.csproj",
+        "projectUniqueName": "C:\\AlperenElbiz\\Software Projects\\382\\CENG382_23_24_s_202111021\\Lab4\\Lab4.csproj",
         "projectName": "Lab4",
-        "projectPath": "C:\\AlperenElbiz\\Software Projects\\382\\CENG382_23_24_s_202111021\\lab4\\Lab4.csproj",
+        "projectPath": "C:\\AlperenElbiz\\Software Projects\\382\\CENG382_23_24_s_202111021\\Lab4\\Lab4.csproj",
         "packagesPath": "C:\\Users\\alper\\.nuget\\packages\\",
-        "outputPath": "C:\\AlperenElbiz\\Software Projects\\382\\CENG382_23_24_s_202111021\\lab4\\obj\\",
+        "outputPath": "C:\\AlperenElbiz\\Software Projects\\382\\CENG382_23_24_s_202111021\\Lab4\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alper\\AppData\\Roaming\\NuGet\\NuGet.Config"
