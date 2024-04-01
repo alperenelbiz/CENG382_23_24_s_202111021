@@ -1,0 +1,15 @@
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\bin\Debug\net8.0\CENG382_23_24_s_202111021.exe
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\bin\Debug\net8.0\CENG382_23_24_s_202111021.deps.json
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\bin\Debug\net8.0\CENG382_23_24_s_202111021.runtimeconfig.json
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\bin\Debug\net8.0\CENG382_23_24_s_202111021.dll
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\bin\Debug\net8.0\CENG382_23_24_s_202111021.pdb
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\obj\Debug\net8.0\CENG382_23_24_s_202111021.GeneratedMSBuildEditorConfig.editorconfig
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\obj\Debug\net8.0\CENG382_23_24_s_202111021.AssemblyInfoInputs.cache
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\obj\Debug\net8.0\CENG382_23_24_s_202111021.AssemblyInfo.cs
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\obj\Debug\net8.0\CENG382_23_24_s_202111021.csproj.CoreCompileInputs.cache
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\obj\Debug\net8.0\CENG382_23_24_s_202111021.sourcelink.json
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\obj\Debug\net8.0\CENG382_23_24_s_202111021.dll
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\obj\Debug\net8.0\refint\CENG382_23_24_s_202111021.dll
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\obj\Debug\net8.0\CENG382_23_24_s_202111021.pdb
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\obj\Debug\net8.0\CENG382_23_24_s_202111021.genruntimeconfig.cache
+C:\AlperenElbiz\Software Projects\382\CENG382_23_24_s_202111021\obj\Debug\net8.0\ref\CENG382_23_24_s_202111021.dll
