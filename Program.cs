@@ -22,8 +22,7 @@ public class RoomData
 
     public class Reservation
     {
-        public DateTime Time { get; set; }
-        public DateTime Date { get; set; }
+        public DateTime DateTime { get; set; }
         public string ReserverName { get; set; }
         public Room Room { get; set; }
     }
@@ -32,13 +31,11 @@ public class RoomData
     {
         public List<Reservation> reservations = new List<Reservation>();
 
-        // public List<Reservation> Reservations => reservations;
-
         public bool AddReservation(Reservation reservation)
         {
             foreach (var existingReservation in reservations)
             {
-                if (existingReservation.Time == reservation.Time && existingReservation.Room == reservation.Room)
+                if (existingReservation.DateTime == reservation.DateTime && existingReservation.Room == reservation.Room)
                 {
                     Console.WriteLine("There's already a reservation for this time and room.");
                     return false;
@@ -60,7 +57,7 @@ public class RoomData
         {
             foreach (var reservation in reservations)
             {
-                Console.WriteLine($"Date: {reservation.Date.ToShortDateString()}, Time: {reservation.Time.ToShortTimeString()}, Room: {reservation.Room.roomName}, Reserver: {reservation.ReserverName}");
+                Console.WriteLine($"Date: {reservation.DateTime.ToShortDateString()}, Time: {reservation.DateTime.ToShortTimeString()}, Room: {reservation.Room.roomName}, Reserver: {reservation.ReserverName}");
             }
         }
     }
@@ -113,32 +110,31 @@ public class RoomData
                         Console.Write("Enter reserver name: ");
                         string reserverName = Console.ReadLine();
 
+                        Console.Write("Enter reservation date (MM/DD/YYYY): ");
+                        DateTime date = DateTime.Parse(Console.ReadLine());
+
                         Console.WriteLine("Available Rooms:");
                         for (int i = 0; i < roomData.Rooms.Length; i++)
                         {
                             Console.WriteLine($"{i + 1}. {roomData.Rooms[i].roomName}");
                         }
 
-                        Console.Write("Select room (enter room number): ");
-                        int roomIndex = int.Parse(Console.ReadLine()) - 1;
-                        if (roomIndex < 0 || roomIndex >= roomData.Rooms.Length)
+                        Console.Write("We can take reservations between 9:00 to 20:00! ");
+                        Console.Write("Enter time period (e.g., 9 for 9:00 - 10:00, 10 for 10:00 - 11:00): ");
+                        int timePeriod = int.Parse(Console.ReadLine());
+                        if (timePeriod < 9 || timePeriod > 20)
                         {
-                            Console.WriteLine("Invalid room selection.");
+                            Console.WriteLine("Invalid time period.");
                             break;
                         }
 
-                        Console.Write("Enter reservation date (MM/DD/YYYY): ");
-                        DateTime date = DateTime.Parse(Console.ReadLine());
-
-                        Console.Write("Enter reservation time (HH:MM): ");
-                        DateTime time = DateTime.Parse(Console.ReadLine());
+                        DateTime time = new DateTime(date.Year, date.Month, date.Day, timePeriod, 0, 0);
 
                         Reservation newReservation = new Reservation
                         {
-                            Date = date,
-                            Time = time,
+                            DateTime = time,
                             ReserverName = reserverName,
-                            Room = roomData.Rooms[roomIndex]
+                            Room = roomData.Rooms[timePeriod]
                         };
 
                         reservationHandler.AddReservation(newReservation);
@@ -156,7 +152,7 @@ public class RoomData
                         Console.WriteLine("Current Reservations:");
                         for (int i = 0; i < reservationHandler.reservations.Count; i++)
                         {
-                            Console.WriteLine($"{i + 1}. Date: {reservationHandler.reservations[i].Date.ToShortDateString()}, Time: {reservationHandler.reservations[i].Time.ToShortTimeString()}, Room: {reservationHandler.reservations[i].Room.roomName}, Reserver: {reservationHandler.reservations[i].ReserverName}");
+                            Console.WriteLine($"{i + 1}. Date: {reservationHandler.reservations[i].DateTime.ToShortDateString()}, Time: {reservationHandler.reservations[i].DateTime.ToShortTimeString()}, Room: {reservationHandler.reservations[i].Room.roomName}, Reserver: {reservationHandler.reservations[i].ReserverName}");
                         }
 
                         Console.Write("Enter reservation number to delete: ");
