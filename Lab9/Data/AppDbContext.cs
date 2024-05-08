@@ -1,3 +1,4 @@
+using Lab9.Models;
 using Microsoft.EntityFrameworkCore;
 public class AppDbContext : DbContext
 {
@@ -6,4 +7,5 @@ public class AppDbContext : DbContext
     {
     }
     public DbSet<Room> Rooms { get; set; }
+    public DbSet<Reservation> Reservations { get; set; }
 }
