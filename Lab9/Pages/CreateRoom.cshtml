@@ -1,0 +1,19 @@
+@page
+@model CreateRoomModel
+@{
+    ViewData["Title"] = "Create Room";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="RoomName">Room Name:</label>
+        <input type="text" class="form-control" id="RoomName" name="RoomName">
+    </div>
+    <div class="form-group">
+        <label for="Capacity">Capacity:</label>
+        <input type="number" class="form-control" id="Capacity" name="Capacity">
+    </div>
+    <button type="submit" class="btn btn-primary">Create Room</button>
+</form>

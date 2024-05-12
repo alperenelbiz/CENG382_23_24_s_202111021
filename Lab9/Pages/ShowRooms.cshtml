@@ -1,0 +1,25 @@
+@page
+@model ShowRoomsModel
+@{
+    ViewData["Title"] = "Show Rooms";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Room Name</th>
+            <th>Capacity</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var room in Model.Rooms)
+        {
+            <tr>
+                <td>@room.RoomName</td>
+                <td>@room.Capacity</td>
+            </tr>
+        }
+    </tbody>
+</table>
