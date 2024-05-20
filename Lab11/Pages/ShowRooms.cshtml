@@ -1,0 +1,32 @@
+@page
+@model ShowRoomsModel
+@{
+    ViewData["Title"] = "Show Rooms";
+}
+
+<div class="container">
+    <h1 class="mt-5">Show Rooms</h1>
+    <div class="row mt-4 justify-content-center">
+        <div class="col-md-8">
+            <p><a asp-page="./CreateRoom" class="btn btn-primary">Create New Room</a></p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Room Name</th>
+                        <th>Capacity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var room in Model.Room)
+
+                    {
+                        <tr>
+                            <td>@room.RoomName</td>
+                            <td>@room.Capacity</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
