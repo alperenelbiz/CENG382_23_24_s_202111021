@@ -9,6 +9,4 @@ public class ApplicationDbContext : IdentityDbContext
         : base(options)
     {
     }
-
-    public DbSet<Room> Rooms { get; set; }
 }
