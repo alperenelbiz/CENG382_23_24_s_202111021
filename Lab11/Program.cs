@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Lab11.Data;
+using lab11.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
