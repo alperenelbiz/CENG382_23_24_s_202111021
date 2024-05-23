@@ -11,6 +11,6 @@ public class ApplicationDbContext : IdentityDbContext
     {
     }
 
-    public DbSet<Room> Room { get; set; }
-    public DbSet<Reservation> Reservation { get; set; }
+    public DbSet<Room> Rooms { get; set; }
+    public DbSet<Reservation> Reservations { get; set; }
 }

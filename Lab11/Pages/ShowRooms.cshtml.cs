@@ -23,7 +23,7 @@ namespace lab11.Pages
 
         public async Task<IActionResult> OnGetAsync()
         {
-            Room = await _context.Room.ToListAsync();
+            Room = await _context.Rooms.ToListAsync();
             return Page();
         }
     }

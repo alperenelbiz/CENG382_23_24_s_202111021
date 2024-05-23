@@ -34,7 +34,7 @@ namespace lab11.Pages
                 return Page();
             }
 
-            _context.Room.Add(Room);
+            _context.Rooms.Add(Room);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
