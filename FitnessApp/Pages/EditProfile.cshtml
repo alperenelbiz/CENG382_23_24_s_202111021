@@ -1,0 +1,38 @@
+﻿@page
+@model FitnessApp.Pages.EditProfileModel
+@{
+    ViewData["Title"] = "Edit Profile";
+}
+
+<h2>Edit Profile</h2>
+
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="ProfilePicture" class="control-label"></label>
+        <input type="file" asp-for="ProfilePicture" class="form-control" />
+        <span asp-validation-for="ProfilePicture" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="UserProfile.Email" class="control-label"></label>
+        <input asp-for="UserProfile.Email" class="form-control" />
+        <span asp-validation-for="UserProfile.Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="UserProfile.Bio" class="control-label"></label>
+        <textarea asp-for="UserProfile.Bio" class="form-control"></textarea>
+        <span asp-validation-for="UserProfile.Bio" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="NewPassword" class="control-label"></label>
+        <input asp-for="NewPassword" type="password" class="form-control" />
+        <span asp-validation-for="NewPassword" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ConfirmPassword" class="control-label"></label>
+        <input asp-for="ConfirmPassword" type="password" class="form-control" />
+        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Save Changes" class="btn btn-primary" />
+    </div>
+</form>

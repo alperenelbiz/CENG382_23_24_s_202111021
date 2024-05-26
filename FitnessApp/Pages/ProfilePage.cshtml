@@ -1,0 +1,33 @@
+﻿@page
+@model FitnessApp.Pages.ProfilePageModel
+@{
+    ViewData["Title"] = "ProfilePage";
+}
+
+<h2>Profile</h2>
+
+@if (Model.UserProfile != null)
+{
+    <div>
+        <h3>@Model.UserProfile.UserName's Profile</h3>
+        <img src="data:image;base64,@(Model.ProfilePictureBase64)" alt="Profile Picture" style="max-width: 200px;" />
+        <p>Email: @Model.UserProfile.Email</p>
+        <p>Bio: @Model.UserProfile.Bio</p>
+
+        <h4>Saved Challenges</h4>
+        <ul>
+            @foreach (var challenge in Model.SavedChallenges)
+            {
+                <lu>@challenge.Name - @challenge.Category</lu>
+                <form method="get" asp-page="/ChallengesPage">
+                    <button asp-page="/ChallengesPage" asp-route-id="@challenge.Id">View</button>
+                    <button asp-page="/EditProfile">Edit Profile</button>
+                </form>
+            }
+        </ul>
+    </div>
+}
+else
+{
+    <p>No profile information available.</p>
+}

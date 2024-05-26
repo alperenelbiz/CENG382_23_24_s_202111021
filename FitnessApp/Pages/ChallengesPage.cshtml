@@ -1,0 +1,52 @@
+﻿@page "{id:int}"
+@model ChallengesPageModel
+@{
+    ViewData["Title"] = "Challenge Details";
+}
+
+<h2 class="text-center">@Model.Challenge.Name</h2>
+<div class="card p-4 shadow-sm content-container">
+    <div class="challengeDetail">
+
+        <dl class="row mt-3">
+            <dt class="col-sm-3">Category</dt>
+            <dd class="col-sm-9">@Model.Challenge.Category</dd>
+            <dt class="col-sm-3">Period</dt>
+            <dd class="col-sm-9">@Model.Challenge.Period</dd>
+            <dt class="col-sm-3">Difficulty</dt>
+            <dd class="col-sm-9">@Model.Challenge.Difficulty</dd>
+            <dt class="col-sm-3">Instructions</dt>
+            <dd class="col-sm-9">@Model.Challenge.Instructions</dd>
+            <dt class="col-sm-3">Created At</dt>
+            <dd class="col-sm-9">@Model.Challenge.CreatTime.ToShortDateString()</dd>
+            <dt class="col-sm-3">Rate</dt>
+            <dd class="col-sm-9">@Model.AverageRating</dd>
+        </dl>
+
+        <h3>Comments</h3>
+        <form method="post" asp-page-handler="AddComment" class="mb-3">
+            <textarea name="text" class="form-control" rows="3" placeholder="Add a comment"></textarea>
+            <button type="submit" class="btn btn-primary mt-2">Add Comment</button>
+        </form>
+        <ul class="list-unstyled">
+            @foreach (var comment in Model.Comments)
+            {
+                <li class="mb-2">
+                    <strong>@comment.User.UserName</strong> (@comment.CreatedTime.ToShortDateString()): @comment.Text
+                </li>
+            }
+        </ul>
+
+        <h3>Rate Challenge</h3>
+        <form method="post" asp-page-handler="RateChallenge" class="mb-3">
+            <input type="number" name="value" min="1" max="5" /><br />
+            <input type="submit" value="Rate" />
+        </form>
+
+        <form method="post" asp-page-handler="SaveChallenge" class="mb-3">
+            <input type="submit" value="Save Challenge" />
+        </form>
+
+        <a asp-page="/Challenges" class="btn btn-secondary mt-3">Back to list</a>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+@using Microsoft.AspNetCore.Identity
+@using FitnessApp.Models
+@using FitnessApp.Pages
+@inject SignInManager<ApplicationUser> SignInManager
+
+
+<div class="container text-center">
+    <div class="indexHome">
+        <h1 class="display-4">Welcome to FitnessApp</h1>
+        <p class="lead">Take your fitness journey to the next level with our challenges and community.</p>
+        <hr>
+        <div class="row">
+            <div class="indexHome">
+                <h3>Checkout Your Profile</h3>
+                <p>Who doesn't want to edit their profile?</p>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <a href="/ProfilePage" class="btn btn-outline-secondary">View Profile</a>
+                }
+                else
+                {
+                    <a href="/Identity/Account/Login" class="btn btn-outline-secondary">Login to View Profile</a>
+                }
+            </div>
+            <div class="indexHome">
+                <h3>Checkout Challenges</h3>
+                <p>Take the first step towards a healthy life.</p>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <a href="/ChallengesList" class="btn btn-outline-secondary">Visit Challenges</a>
+                }
+                else
+                {
+                    <a href="/Identity/Account/Login" class="btn btn-outline-secondary">Login to Visit Challenges</a>
+                }
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>

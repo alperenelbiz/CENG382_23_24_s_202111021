@@ -1,0 +1,75 @@
+﻿@page
+@model ChallengesListModel
+@{
+    ViewData["Title"] = "ChallengesList";
+}
+
+<h2>Challenges</h2>
+
+<form method="get">
+    <div class="form-group">
+        <label for="SearchTerm">Search</label>
+        <input type="text" name="SearchTerm" class="form-control" value="@Model.SearchTerm"
+            placeholder="Search by keywords..." />
+    </div>
+    <div class="form-group">
+        <label for="Category">Category</label>
+        <select name="Category" class="form-control">
+            <option value="">Select a category</option>
+            @foreach (var category in Model.Categories)
+            {
+                <option value="@category" selected="@Model.SelectedCategory == category">@category</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="Difficulty">Difficulty</label>
+        <select name="Difficulty" class="form-control">
+            <option value="">Select a difficulty</option>
+            @foreach (var difficulty in Model.Difficulties)
+            {
+                <option value="@difficulty" selected="@Model.SelectedDifficulty == difficulty">@difficulty</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="Period">Time Period</label>
+        <select name="Period" class="form-control">
+            <option value="">Select a period</option>
+            <option value="1 Week" selected="@Model.Period == 1 Weeks">1 Week</option>
+            <option value="2 Weeks" selected="@Model.Period == 2 Weeks">2 Week</option>
+            <option value="1 Month" selected="@Model.Period == 1 Months">1 Month</option>
+            <option value="3 Months" selected="@Model.Period == 3 Months">3 Month</option>
+            <option value="6 Months" selected="@Model.Period == 6 Months">6 Month</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Period</th>
+            <th>Difficulty</th>
+            <th>Created At</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var challenge in Model.Challenges)
+        {
+            <tr>
+                <td>@challenge.Name</td>
+                <td>@challenge.Category</td>
+                <td>@challenge.Period</td>
+                <td>@challenge.Difficulty</td>
+                <td>@challenge.CreatTime.ToShortDateString()</td>
+                <td>
+                    <a asp-page="/ChallengesPage" asp-route-id="@challenge.Id">View</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
