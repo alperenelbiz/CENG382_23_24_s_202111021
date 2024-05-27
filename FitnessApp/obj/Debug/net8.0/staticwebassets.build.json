@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZZ831NW3Vyz25T6R+VkSAyxml4k8wZrpjw9ovSaRiX4=",
+  "Hash": "KIWuapJzUDynaJ7VqkBnuCSHHeQnnMWWSw2mrXXfqzs=",
   "Source": "FitnessChallengeApp",
   "BasePath": "_content/FitnessChallengeApp",
   "Mode": "Default",
@@ -93,12 +93,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\AlperenElbiz\\Software Projects\\382\\CENG382_23_24_s_202111021\\FitnessApp\\wwwroot\\images\\user.png",
+      "Identity": "C:\\AlperenElbiz\\Software Projects\\382\\CENG382_23_24_s_202111021\\FitnessApp\\wwwroot\\images\\user2.png",
       "SourceId": "FitnessChallengeApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\AlperenElbiz\\Software Projects\\382\\CENG382_23_24_s_202111021\\FitnessApp\\wwwroot\\",
       "BasePath": "_content/FitnessChallengeApp",
-      "RelativePath": "images/user.png",
+      "RelativePath": "images/user2.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -109,7 +109,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\user.png"
+      "OriginalItemSpec": "wwwroot\\images\\user2.png"
     },
     {
       "Identity": "C:\\AlperenElbiz\\Software Projects\\382\\CENG382_23_24_s_202111021\\FitnessApp\\wwwroot\\js\\site.js",

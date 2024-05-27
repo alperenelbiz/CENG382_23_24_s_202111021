@@ -21,10 +21,10 @@
                 <lu>@challenge.Name - @challenge.Category</lu>
                 <form method="get" asp-page="/ChallengesPage">
                     <button asp-page="/ChallengesPage" asp-route-id="@challenge.Id">View</button>
-                    <button asp-page="/EditProfile">Edit Profile</button>
                 </form>
             }
         </ul>
+        <a asp-page="/EditProfile">Edit Profile</a>
     </div>
 }
 else
