@@ -26,6 +26,7 @@
             <tr>
                 <th>Name</th>
                 <th>Date</th>
+                <th>Time</th>
             </tr>
         </thead>
         <tbody>
@@ -34,6 +35,7 @@
                 <tr>
                     <td>@reservation.Room.RoomName</td>
                     <td>@reservation.ReservationDateTime.ToString("d")</td>
+                    <td>@reservation.ReservationDateTime.ToString("hh:mm tt")</td>
                 </tr>
             }
         </tbody>
