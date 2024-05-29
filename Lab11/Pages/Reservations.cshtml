@@ -1,82 +1,45 @@
-@page
-@model lab11.Pages.ReservationsModel
+﻿@page
+@model MyApp.Namespace.ReservationsModel
 @{
-    ViewData["Title"] = "Reservations";
+    ViewData["Title"] = "Reservationss";
 }
 
-<div class="container">
-    <h1 class="mt-5">Reservations</h1>
+<h2>Weekly Reservations</h2>
 
-    <div class="row">
-        <div class="col-md-12">
-            <form method="get" class="row g-3">
-                <div class="col-md-3">
-                    <label for="RoomName" class="form-label">Room Name</label>
-                    <input type="text" class="form-control" id="RoomName" name="RoomName"
-                        value="@Model.Filter.RoomName">
-                </div>
-                <div class="col-md-3">
-                    <label for="StartDate" class="form-label">Start Date</label>
-                    <input type="date" class="form-control" id="StartDate" name="StartDate"
-                        value="@Model.Filter.StartDate.ToString("yyyy-MM-dd")">
-                </div>
-                <div class="col-md-3">
-                    <label for="EndDate" class="form-label">End Date</label>
-                    <input type="date" class="form-control" id="EndDate" name="EndDate"
-                        value="@Model.Filter.EndDate.ToString("yyyy-MM-dd")">
-                </div>
-                <div class="col-md-3">
-                    <label for="Capacity" class="form-label">Room Capacity</label>
-                    <input type="number" class="form-control" id="Capacity" name="Capacity"
-                        value="@Model.Filter.Capacity">
-                </div>
-                <div class="col-md-12 mt-2">
-                    <button type="submit" class="btn btn-primary">Filter</button>
-                </div>
-            </form>
-        </div>
+<form method="post" class="mt-4">
+    <div class="form-group">
+        <label asp-for="RoomId" class="control-label">Room</label>
+        <select asp-for="RoomId" class="form-control" asp-items="Model.Rooms"></select>
     </div>
+    <div class="form-group">
+        <label asp-for="StartDate" class="control-label">Week Starting From</label>
+        <input asp-for="StartDate" class="form-control" type="date" />
+    </div>
+    <button type="submit" class="btn btn-primary">Show Reservations</button>
+</form>
 
-    <div class="row mt-4">
-        <div class="col-md-12">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        @foreach (var day in Model.WeekDays)
-                        {
-                            <th>@day.ToString("dddd") @day.ToString("MM/dd")</th>
-                        }
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var hour in Model.Hours)
-                    {
-                        <tr>
-                            <td>@hour.ToString(@"hh\:mm")</td>
-                            @foreach (var day in Model.WeekDays)
-                            {
-                                <td>
-                                    @if (Model.Reservations.TryGetValue((day, hour), out var reservation))
-                                    {
-                                        <div>
-                                            <span>@reservation.Room.RoomName (@reservation.Room.Capacity)</span>
-                                            <span class="ms-2">
-                                                <a href="/EditReservation?id=@reservation.Id" class="text-primary" title="Edit">
-                                                    <i class="bi bi-pencil-square"></i>
-                                                </a>
-                                                <a href="/DeleteReservation?id=@reservation.Id" class="text-danger" title="Delete">
-                                                    <i class="bi bi-trash"></i>
-                                                </a>
-                                            </span>
-                                        </div>
-                                    }
-                                </td>
-                            }
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
+@if (Model.Reservations != null && Model.Reservations.Any())
+{
+    <h3 class="mt-4">Reservations for the week starting @Model.StartDate.ToString("d")</h3>
+    <table class="table table-bordered mt-2">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var reservation in Model.Reservations)
+            {
+                <tr>
+                    <td>@reservation.Room.RoomName</td>
+                    <td>@reservation.ReservationDateTime.ToString("d")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else if (Model.RoomId > 0)
+{
+    <p>No reservations found for the selected week.</p>
+}

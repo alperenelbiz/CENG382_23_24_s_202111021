@@ -1,32 +1,31 @@
-@page
-@model lab11.Pages.CreateReservationModel
+﻿@page
+@model MyApp.Namespace.CreateReservationModel
 @{
-    ViewData["Title"] = "Make a Reservation";
+    ViewData["Title"] = "Create Reservation";
 }
 
-<div class="container">
-    <h1 class="mt-5">Make a Reservation</h1>
+<h2>Create Reservation</h2>
 
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <form method="post" class="mt-4">
-                <div class="mb-3">
-                    <label for="RoomId" class="form-label">Room</label>
-                    <select class="form-control" id="RoomId" name="RoomId" asp-for="Reservation.RoomId">
-                        <option value="">Select a room</option>
-                        @foreach (var room in Model.Rooms)
-                        {
-                            <option value="@room.Id">@room.RoomName</option>
-                        }
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="ReservationDateTime" class="form-label">Reservation Date & Time</label>
-                    <input type="datetime-local" class="form-control" id="ReservationDateTime"
-                        name="ReservationDateTime" asp-for="Reservation.ReservationDateTime">
-                </div>
-                <button type="submit" class="btn btn-primary">Make Reservation</button>
-            </form>
-        </div>
+<form method="post" class="mt-4">
+    <div class="form-group">
+        <label asp-for="Reservation.RoomId" class="control-label">Room</label>
+        <select asp-for="Reservation.RoomId" class="form-control" asp-items="Model.Rooms"></select>
+        <span asp-validation-for="Reservation.RoomId" class="text-danger"></span>
     </div>
-</div>
+    <div class="form-group">
+        <label asp-for="Reservation.ReservedBy" class="control-label">Name</label>
+        <input asp-for="Reservation.ReservedBy" class="form-control" />
+        <span asp-validation-for="Reservation.ReservedBy" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Reservation.ReservationDateTime" class="control-label">Date</label>
+        <input asp-for="Reservation.ReservationDateTime" class="form-control" type="date" />
+        <span asp-validation-for="Reservation.ReservationDateTime" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a asp-page="./Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

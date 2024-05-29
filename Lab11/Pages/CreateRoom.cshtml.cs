@@ -37,7 +37,7 @@ namespace lab11.Pages
             _context.Rooms.Add(Room);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./ShowRooms");
         }
     }
 }
