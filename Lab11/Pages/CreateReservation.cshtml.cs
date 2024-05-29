@@ -32,6 +32,21 @@ namespace MyApp.Namespace
 
         public async Task<IActionResult> OnPostAsync()
         {
+            if (Reservation.ReservationDateTime < DateTime.UtcNow)
+            {
+                ModelState.AddModelError("", "Please enter a valid date in the future!");
+                Rooms = new SelectList(await _context.Rooms.ToListAsync(), "Id", "RoomName");
+                return Page();
+            }
+
+            var oldReservation = await _context.Reservations.FirstOrDefaultAsync(r => r.RoomId == Reservation.RoomId && r.ReservationDateTime == Reservation.ReservationDateTime);
+
+            if (oldReservation != null)
+            {
+                ModelState.AddModelError("", "There is another reservation in that time.");
+                Rooms = new SelectList(await _context.Rooms.ToListAsync(), "Id", "RoomName");
+                return Page();
+            }
             _context.Reservations.Add(Reservation);
             await _context.SaveChangesAsync();
             return RedirectToPage("./Reservations");
