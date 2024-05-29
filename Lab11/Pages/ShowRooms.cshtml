@@ -23,6 +23,11 @@
                         <tr>
                             <td>@room.RoomName</td>
                             <td>@room.Capacity</td>
+                            <td>
+                                <form method="post" asp-page-handler="Delete" asp-route-id="@room.Id">
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
+                            </td>
                         </tr>
                     }
                 </tbody>

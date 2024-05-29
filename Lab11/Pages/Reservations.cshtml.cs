@@ -49,6 +49,19 @@ namespace MyApp.Namespace
 
             return Page();
         }
+
+        public async Task<IActionResult> OnPostDeleteAsync(int id)
+        {
+            var reservation = await _context.Reservations.FindAsync(id);
+
+            if (reservation != null)
+            {
+                _context.Reservations.Remove(reservation);
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToPage(new { RoomId, StartDate });
+        }
     }
 
     public static class DateTimeExtensions

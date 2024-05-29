@@ -26,5 +26,18 @@ namespace lab11.Pages
             Room = await _context.Rooms.ToListAsync();
             return Page();
         }
+
+        public async Task<IActionResult> OnPostDeleteAsync(int id)
+        {
+            var room = await _context.Rooms.FindAsync(id);
+
+            if (room != null)
+            {
+                _context.Rooms.Remove(room);
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToPage();
+        }
     }
 }

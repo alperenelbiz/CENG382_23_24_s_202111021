@@ -36,6 +36,11 @@
                     <td>@reservation.Room.RoomName</td>
                     <td>@reservation.ReservationDateTime.ToString("d")</td>
                     <td>@reservation.ReservationDateTime.ToString("hh:mm tt")</td>
+                    <td>
+                        <form method="post" asp-page-handler="Delete" asp-route-id="@reservation.Id">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </td>
                 </tr>
             }
         </tbody>
