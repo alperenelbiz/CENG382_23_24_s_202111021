@@ -71,9 +71,23 @@ namespace MyApp.Namespace
             {
                 _context.Reservations.Remove(reservation);
                 await _context.SaveChangesAsync();
+                await LogActionAsync("Delete", "Reservation");
             }
 
             return RedirectToPage(new { RoomId, StartDate });
+        }
+
+        private async Task LogActionAsync(string action, string entity)
+        {
+            var logEntry = new LogEntry
+            {
+                Action = action,
+                Entity = entity,
+                Timestamp = DateTime.UtcNow
+            };
+
+            _context.LogEntries.Add(logEntry);
+            await _context.SaveChangesAsync();
         }
     }
 

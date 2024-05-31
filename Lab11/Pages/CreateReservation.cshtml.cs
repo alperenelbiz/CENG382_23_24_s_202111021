@@ -1,11 +1,12 @@
+using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using lab11.Data;
 using lab11.Models;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using System.Linq;
-using Microsoft.EntityFrameworkCore;
 
 namespace MyApp.Namespace
 {
@@ -16,7 +17,6 @@ namespace MyApp.Namespace
         public CreateReservationModel(ApplicationDbContext context)
         {
             _context = context;
-
         }
 
         [BindProperty]
@@ -39,17 +39,35 @@ namespace MyApp.Namespace
                 return Page();
             }
 
-            var oldReservation = await _context.Reservations.FirstOrDefaultAsync(r => r.RoomId == Reservation.RoomId && r.ReservationDateTime == Reservation.ReservationDateTime);
+            var oldReservation = await _context.Reservations
+                .FirstOrDefaultAsync(r => r.RoomId == Reservation.RoomId && r.ReservationDateTime == Reservation.ReservationDateTime);
 
             if (oldReservation != null)
             {
-                ModelState.AddModelError("", "There is another reservation in that time.");
+                ModelState.AddModelError("", "There is another reservation at that time.");
                 Rooms = new SelectList(await _context.Rooms.ToListAsync(), "Id", "RoomName");
                 return Page();
             }
+
             _context.Reservations.Add(Reservation);
             await _context.SaveChangesAsync();
+
+            await LogActionAsync("Create", "Reservation");
+
             return RedirectToPage("./Reservations");
+        }
+
+        private async Task LogActionAsync(string action, string entity)
+        {
+            var logEntry = new LogEntry
+            {
+                Action = action,
+                Entity = entity,
+                Timestamp = DateTime.UtcNow
+            };
+
+            _context.LogEntries.Add(logEntry);
+            await _context.SaveChangesAsync();
         }
     }
 }

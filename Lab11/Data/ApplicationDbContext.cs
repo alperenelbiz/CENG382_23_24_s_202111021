@@ -13,4 +13,5 @@ public class ApplicationDbContext : IdentityDbContext
 
     public DbSet<Room> Rooms { get; set; }
     public DbSet<Reservation> Reservations { get; set; }
+    public DbSet<LogEntry> LogEntries { get; set; }
 }
