@@ -43,9 +43,22 @@ namespace MyApp.Namespace
             Rooms = new SelectList(await _context.Rooms.ToListAsync(), "Id", "RoomName");
 
             var endDate = StartDate.AddDays(7);
-            Reservations = await _context.Reservations
-                .Where(r => r.RoomId == RoomId && r.ReservationDateTime >= StartDate && r.ReservationDateTime < endDate)
-                .ToListAsync();
+            if (RoomId == 0)
+            {
+                // Show all reservations for the week
+                Reservations = await _context.Reservations
+                    .Include(r => r.Room)
+                    .Where(r => r.ReservationDateTime >= StartDate && r.ReservationDateTime < endDate)
+                    .ToListAsync();
+            }
+            else
+            {
+                // Filter reservations by selected room
+                Reservations = await _context.Reservations
+                    .Include(r => r.Room)
+                    .Where(r => r.RoomId == RoomId && r.ReservationDateTime >= StartDate && r.ReservationDateTime < endDate)
+                    .ToListAsync();
+            }
 
             return Page();
         }

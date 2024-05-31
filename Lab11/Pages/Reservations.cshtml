@@ -1,7 +1,7 @@
 ﻿@page
 @model MyApp.Namespace.ReservationsModel
 @{
-    ViewData["Title"] = "Reservationss";
+    ViewData["Title"] = "Reservations";
 }
 
 <h2>Weekly Reservations</h2>
@@ -9,7 +9,9 @@
 <form method="post" class="mt-4">
     <div class="form-group">
         <label asp-for="RoomId" class="control-label">Room</label>
-        <select asp-for="RoomId" class="form-control" asp-items="Model.Rooms"></select>
+        <select asp-for="RoomId" class="form-control" asp-items="Model.Rooms">
+            <option value="0">Show All</option>
+        </select>
     </div>
     <div class="form-group">
         <label asp-for="StartDate" class="control-label">Week Starting From</label>
@@ -20,27 +22,48 @@
 
 @if (Model.Reservations != null && Model.Reservations.Any())
 {
-    <h3 class="mt-4">Reservations for the week starting @Model.StartDate.ToString("d")</h3>
+    var startDate = Model.StartDate;
+    var endDate = startDate.AddDays(6);
+    var timeSlots = new[] { "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM",
+"04:00 PM", "05:00 PM" };
+
+    <h3 class="mt-4">Reservations for the week starting @startDate.ToString("d")</h3>
     <table class="table table-bordered mt-2">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Date</th>
                 <th>Time</th>
+                @for (var day = 0; day < 7; day++)
+                {
+                    <th>@startDate.AddDays(day).ToString("dddd d MMM")</th>
+                }
             </tr>
         </thead>
         <tbody>
-            @foreach (var reservation in Model.Reservations)
+            @foreach (var timeSlot in timeSlots)
             {
                 <tr>
-                    <td>@reservation.Room.RoomName</td>
-                    <td>@reservation.ReservationDateTime.ToString("d")</td>
-                    <td>@reservation.ReservationDateTime.ToString("hh:mm tt")</td>
-                    <td>
-                        <form method="post" asp-page-handler="Delete" asp-route-id="@reservation.Id">
-                            <button type="submit" class="btn btn-danger">Delete</button>
-                        </form>
-                    </td>
+                    <td>@timeSlot</td>
+                    @for (var day = 0; day < 7; day++)
+                    {
+                        var currentDate = startDate.AddDays(day);
+                        var currentTimeSlot = DateTime.Parse(timeSlot);
+                        var reservation = Model.Reservations.FirstOrDefault(r => r.ReservationDateTime.Date == currentDate.Date &&
+                        r.ReservationDateTime.TimeOfDay == currentTimeSlot.TimeOfDay);
+
+                        <td>
+                            @if (reservation != null)
+                            {
+                                <div>
+                                    @reservation.Room.RoomName
+                                    <br />
+                                    @reservation.ReservationDateTime.ToString("hh:mm tt")
+                                    <form method="post" asp-page-handler="Delete" asp-route-id="@reservation.Id" class="mt-2">
+                                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                    </form>
+                                </div>
+                            }
+                        </td>
+                    }
                 </tr>
             }
         </tbody>
